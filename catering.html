@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Catering</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+          cursor: pointer;
+        }
+      </style>
+    
+</head>
+<body >
+<div class="catering">
+<!--------------------Nav bar---------------------------------------------->
+<div class="nav-bar">    
+    <div class="logo">
+        <img src="Image/logo.png" alt="Logo">
+    </div>
+            <nav>
+                <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <i class="bi bi-brightness-high-fill" id="toggleDark"></i>            
+                </ul>
+            </nav>       
+</div>
+<!---------------------header---------------------------------------------->
+<div class="headers">
+    <header>
+       <center> <h1>CATERING</h1></center>
+    </header>
+</div>
+<div class="button-contain">
+<button class="btn"  onclick="showGallery('african-cusions')">
+  <img src="images/image9.JPG" class="bcv">african-cusions</button>
+<button class="btn" onclick="showGallery('modern-cusions')">
+  <img src="food/green soup.png" class="bcv">Modern-Cusions</button>
+<button class="btn" onclick="showGallery('BAR')">
+  <img src="Drinks/bar image.jfif" class="bcv">
+  Show BAR</button>
+</div>
+
+<div class="african-cusions" id="africanGallery">
+<main  class="galary">
+  <center><h2>Traditional-Cusions</h2></center>
+    <br>
+       <center>
+        <figure >
+            <img class="images-food" src="images/image10.JPG">
+            <figcaption>steam bread and meat</figcaption>
+            </figure>
+            <figure >
+            <img class="images-food" src="images/image12.JPG">
+            <figcaption>beef and rice</figcaption>
+            </figure>
+            <figure>
+            <img class="images-food" src="images/image15.JPG">
+            <figcaption>meat and vegies with beetroode</figcaption>
+            </figure>
+            <figure>
+            <img class="images-food" src="images/image16.JPG">
+            <figcaption>checken and mixed pasta sause</figcaption>
+            </figure>
+            <figure>
+            <img class="images-food" src="images/image5.JPG">
+            <figcaption>rice and checken </figcaption>
+            </figure>
+            <figure>
+            <img class="images-food" src="images/image8.JPG">
+            <figcaption>creamy samp and beef stew</figcaption>
+            </figure>
+       </center>
+</main>
+</div>
+
+<div> 
+    <div class="modern-cusions" id="modernGallery">
+        <main class="galary">
+           <center><h2>Modern-Cusions</h2></center>
+        <br>
+           <div>
+              <center>
+                <figure>
+                    <img class="images-food" src="food/steak and peas.png">
+                    <figcaption>steak and pears</figcaption>
+                      </figure>
+                      <figure>
+                    <img class="images-food" src="food/lasagnia.png">
+                    <Figcaption>hot lasagnia</Figcaption>
+                  </figure>
+                  <figure>
+                    <img class="images-food" src="food/vegie cake.png">
+                    <figcaption>starters</figcaption>
+                  </figure>
+                  <figure>
+                  <img class="images-food" src="food/food displayed on table.JPG">
+                  <figcaption>food displayed on table for event</figcaption>
+                  </figure>
+                  <figure>
+                     <img class="images-food" src="food/baffei content.JPG">
+                  <figcaption>baffei</figcaption>
+                  </figure>
+                  <figure>
+                      <img class="images-food" src="food/different kinds of food to choose from on self-service catering.JPG">
+                      <figcaption>self-service catering food</figcaption>
+                  </figure>
+              </center>
+            </div>
+            </div>
+            </div>
+            </main>
+
+           <div> 
+               <div class="drinks" id="drinksGallery">
+                  <main class="galary">
+                     <center><h2>BAR</h2></center>
+               <br>
+                  <div>
+           <center>
+            <figure>
+              <img class="images-food" src="Drinks/brandy.jfif">
+              <figcaption>WISKY BRANDY</figcaption>
+            </figure>
+            <figure>
+              <img class="images-food" src="Drinks/browns.jfif">
+              <Figcaption>HOT COCOLATE</Figcaption>
+            </figure>
+            <figure>
+              <img class="images-food" src="Drinks/cocktail.jfif">
+              <figcaption>COCKTAILS</figcaption>
+            </figure>
+            <figure>
+            <img class="images-food" src="Drinks/cokes.jfif">
+            <figcaption>DRINKS</figcaption>
+            </figure>
+            <figure>
+               <img class="images-food" src="Drinks/smoothy.jfif">
+            <figcaption>SMOOTHY</figcaption>
+            </figure>
+            <figure>
+                <img class="images-food" src="Drinks/wines.jfif">
+                <figcaption>WINE</figcaption>
+            </figure>
+            </center>
+            </div>
+            </div>
+            </div>
+            </main>
+
+</div>
+</div>
+    <script>
+        function showGallery(galleryId) {
+            const africanGallery = document.getElementById('africanGallery');
+            const modernGallery = document.getElementById('modernGallery');
+            const drinksGallery = document.getElementById('drinksGallery')
+
+            if (galleryId === 'african-cusions') {
+                africanGallery.style.display = 'block';
+                modernGallery.style.display = 'none';
+                drinksGallery.style.display = 'none';
+            } else if (galleryId === 'modern-cusions') {
+                africanGallery.style.display = 'none';
+                modernGallery.style.display = 'block';
+                drinksGallery.style.display = 'none';
+            } else if (galleryId === 'BAR') {
+                africanGallery.style.display = 'none';
+                modernGallery.style.display = 'none';
+                drinksGallery.style.display = 'block';
+            }
+        }
+    
+        function goBack() {
+      window.history.back();
+    }
+
+    </script>
+
+    <!----------------------------------------------------------------Footer----------------------------------------------------------------------------->
+<div>
+    
+  <footer class="footer"onclick="goBack()">
+      <p>&copy; 2024 Harmony Catering & Events - All rights reserved.</p>
+      <p>Designed by Young_Tech_Ninjas</p>
+  </footer>
+     
+</div>
+</div>
+</body>
+</html>
